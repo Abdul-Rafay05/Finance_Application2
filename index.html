@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Application</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container w-full flex flex-col justify-center items-center">
+      <div
+        class="content flex flex-col justify-center items-center w-full lg:w-4/5 border"
+      >
+        <div class="heading">
+          <h1
+            class="text-center text-3xl uppercase font-bold tracking-wider my-5"
+          >
+            Finance Application
+          </h1>
+        </div>
+        <div
+          class="field_box w-full p-5 flex justify-between items-center bg-white shadow-md rounded-lg"
+        >
+          <div class="user_field h-full w-full lg:w-4/5 border">
+            <input
+              class="border-2 p-2 rounded-lg outline-none w-[45%] mx-5"
+              type="text"
+              id="user_item"
+              placeholder="Enter the product name ..."
+              required
+            />
+            <input
+              class="border-2 p-2 rounded-lg outline-none w-[45%] mx-5"
+              type="number"
+              id="user_amount"
+              placeholder="Enter the Amount ..."
+              required
+            />
+          </div>
+          <div class="options">
+            <select
+              id="user_income_expense"
+              class="p-2 border-2 border-black rounded-lg"
+            >
+              <option value="Income">Income</option>
+              <option value="Expense">Expense</option>
+            </select>
+            <button
+              id="Add_Data"
+              class="p-2 px-5 rounded-lg bg-blue-600 text-white hover:bg-blue-700"
+            >
+              Add Data
+            </button>
+          </div>
+        </div>
+        <div
+          class="Amount_section flex justify-evenly items-center border gap-[50px] my-5 w-full p-3"
+        >
+          <div class="income flex gap-5">
+            <label>Income Total: </label>
+            <div class="income_total" id="income_total">0</div>
+          </div>
+          <div class="expense flex gap-5">
+            <label>Expense Total: </label>
+            <div class="expense_total" id="expense_total">0</div>
+          </div>
+          <div class="Total flex gap-5">
+            <label>Total:</label>
+            <div class="total_amount" id="Over_All_Total">0</div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="w-full">
+          <table class="table-auto w-full text-center">
+            <thead class="text-start">
+              <tr class="border-2">
+                <th>S No</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Expense I/E</th>
+                <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody class="text-start" id="Insert_data"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
